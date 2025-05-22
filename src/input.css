@@ -2,11 +2,46 @@
 
 @theme{
     --color-primary: #74C69D;
-    --font-title: crimson, serif;
+    --font-title: crimson text, serif;
     --font-body: worker sans, sans-serif;
 }
 @layer{
     .btn{
-        @apply bg-white font-bold py-2 px-4 rounded;
+        @apply font-bold py-2 px-4 rounded;
+    }
+    .btn-primary{
+        @apply w-44 h-12 text-white bg-black rounded-md mt-10 text-lg -tracking-tighter;
+    }
+    .btn-secondary{
+        @apply w-44 h-12 text-black bg-white rounded-md mt-10 text-lg -tracking-tighter;
+    }
+}
+@layer base {
+    p {
+        @apply font-body text-sm md:text-xl;
+    }
+    h1{
+        @apply font-title text-2xl md:text-3xl font-black;
+    }
+    h2{
+        @apply font-body text-sm md:text-2xl font-bold tracking-widest;
+    }
+}
+@layer components{
+    
+    .team-card {
+        @apply border border-gray-300 rounded-md shadow-xl p-3 px-8 m-4
+    }
+    
+    .team-card img {
+        @apply rounded-full mb-4;
+    }
+    
+    .team-card h2 {
+        @apply text-2xl font-bold mb-4 tracking-wide;
+    }
+    
+    .team-card p {
+        @apply text-gray-700 my-4 text-sm;
     }
 }
